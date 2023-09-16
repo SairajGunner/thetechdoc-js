@@ -5,7 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <script src="script.js"></script>
+  <!-- <script src="script.js"></script> -->
+  <script>
+    var inputText = undefined;
+    var searchText = undefined;
+    var result = "NO";
+
+    changeInputText = function () {
+      inputText = document.getElementById("input-text").value;
+      console.log(typeof inputText);
+      console.log(Array.prototype.includes);
+    };
+
+    search = function () {
+      searchText = document.getElementById("search-text").value;
+
+      try {
+        if (inputText.includes(searchText)) result = "YES!";
+        else result = "NO";
+        document.getElementById("result-heading").innerHTML = result;
+      } catch (e) {
+        document.getElementById("result-heading").innerHTML = "Error - " + e;
+      }
+    };
+  </script>
   <body>
     <div
       style="

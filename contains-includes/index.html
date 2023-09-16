@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="script.js"></script>
+  <body>
+    <div
+      style="
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <div id="primary-text-container">
+        <label for="input-text" id="input-text-label">
+          Enter some text here:
+        </label>
+        <input id="input-text" type="text" onkeyup="changeInputText()" />
+      </div>
+      <div id="search-text-container">
+        <label for="search-text" id="search-text-label">
+          Enter search text here:
+        </label>
+        <input id="search-text" type="text" onkeyup="search()" />
+      </div>
+      <div id="result-container">
+        <h3 id="result-heading"></h3>
+      </div>
+    </div>
+  </body>
+</html>
